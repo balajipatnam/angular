@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ProductsComponent } from './products/products.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { ContactComponent } from './contact/contact.component';
-import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { NoPageFoundComponent } from './components/no-page-found/no-page-found.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,11 +16,16 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'product-detail/:id', component: ProductDetailComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'posts', component: PostsComponent },
   { path: '**', component: NoPageFoundComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      initialNavigation: 'enabled',
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
