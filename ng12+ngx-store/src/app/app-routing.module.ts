@@ -8,6 +8,8 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { ContactComponent } from './components/contact/contact.component';
 import { NoPageFoundComponent } from './components/no-page-found/no-page-found.component';
 
+import { PostsComponent } from './components/posts/posts.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -15,11 +17,16 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'product-detail/:id', component: ProductDetailComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'posts', component: PostsComponent },
   { path: '**', component: NoPageFoundComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      initialNavigation: 'enabled',
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
