@@ -265,6 +265,14 @@ export * from './src/main.server';
 ```
 
 ```json
+ "dependencies": {
+  "@angular/platform-server": "~12.2.0",
+  "@nguniversal/express-engine": "^12.1.0",
+  "express": "^4.15.2"
+}
+```
+
+```json
  "devDependencies": {
   "@nguniversal/builders": "^12.1.0",
   "@types/express": "^4.17.0"
