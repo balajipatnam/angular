@@ -1,27 +1,64 @@
-# AngularPoc
+# Angular 12+ Server-side rendering(SSR) with Angular Universal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
+Angular Universal, a technology that renders Angular applications on the server.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Use the package manager [universal](https://angular.io/guide/universal) to install universal.
 
-## Code scaffolding
+```bash
+ng add @nguniversal/express-engine
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Updated Filles after installation
 
-## Build
+```javascript
+src/
+  index.html                 app web page
+  main.ts                    bootstrapper for client app
+  main.server.ts             * bootstrapper for server app
+  style.css                  styles for the app
+  app/ ...                   application code
+    app.server.module.ts     * server-side application module
+server.ts                    * express web server
+tsconfig.json                TypeScript base configuration
+tsconfig.app.json            TypeScript browser application configuration
+tsconfig.server.json         TypeScript server application configuration
+tsconfig.spec.json           TypeScript tests configuration
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
 
-## Running unit tests
+## Package.json
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```json
+scripts: {
+ "dev:ssr": "ng run angular-poc:serve-ssr", // Running application in local
+ "serve:ssr": "node dist/angular-poc/server/main.js",
+ "build:ssr": "ng build && ng run angular-poc:server", // Production Build
+ "prerender": "ng run angular-poc:prerender"
+}
 
-## Running end-to-end tests
+dependencies:{
+ "@angular/platform-server": "~12.2.0",
+ "@nguniversal/express-engine": "^12.1.0",
+ "express": "^4.15.2",
+}
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Usage
 
-## Further help
+```javascript
+npm run dev:ssr
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Open a browser and navigate to http://localhost:4200/. You should see the familiar Tour of Heroes dashboard page
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
