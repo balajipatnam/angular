@@ -98,28 +98,6 @@ tsconfig.spec.json           TypeScript tests configuration
 }
 ```
 
-## package.json
-
-#### Use `dev:ssr` to run app locally
-
-#### Use `build:ssr` to generate the production build
-
-```json
-"scripts": {
- "dev:ssr": "ng run angular-poc:serve-ssr",
- "serve:ssr": "node dist/angular-poc/server/main.js",
- "build:ssr": "ng build && ng run angular-poc:server",
- "prerender": "ng run angular-poc:prerender"
-}
-```
-
-```json
- "devDependencies": {
-  "@nguniversal/builders": "^12.1.0",
-  "@types/express": "^4.17.0"
-}
-```
-
 ## src/app/app.module.ts
 
 Add below code instead of BrowserModule
@@ -269,6 +247,28 @@ if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
 }
 
 export * from './src/main.server';
+```
+
+## package.json
+
+#### Use `dev:ssr` to run app locally
+
+#### Use `build:ssr` to generate the production build
+
+```json
+"scripts": {
+ "dev:ssr": "ng run angular-poc:serve-ssr",
+ "serve:ssr": "node dist/angular-poc/server/main.js",
+ "build:ssr": "ng build && ng run angular-poc:server",
+ "prerender": "ng run angular-poc:prerender"
+}
+```
+
+```json
+ "devDependencies": {
+  "@nguniversal/builders": "^12.1.0",
+  "@types/express": "^4.17.0"
+}
 ```
 
 ## Usage
