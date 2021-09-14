@@ -100,8 +100,9 @@ tsconfig.spec.json           TypeScript tests configuration
 
 ## package.json
 
-Use dev:ssr to run app locally
-Use build:ssr to generate the production build
+#### Use `dev:ssr` to run app locally
+
+#### Use `build:ssr` to generate the production build
 
 ```json
 "scripts": {
