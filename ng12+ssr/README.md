@@ -28,9 +28,79 @@ tsconfig.spec.json           TypeScript tests configuration
 
 ```
 
-## Package.json
+## angular.json
 
-```javascript
+```json
+ "outputPath": "dist/angular-poc",
+ // Add below Command instead of above one
+ "outputPath": "dist/angular-poc/browser",
+```
+
+```json
+{
+  "server": {
+    "builder": "@angular-devkit/build-angular:server",
+    "options": {
+      "outputPath": "dist/angular-poc/server",
+      "main": "server.ts",
+      "tsConfig": "tsconfig.server.json",
+      "inlineStyleLanguage": "scss"
+    },
+    "configurations": {
+      "production": {
+        "outputHashing": "media",
+        "fileReplacements": [
+          {
+            "replace": "src/environments/environment.ts",
+            "with": "src/environments/environment.prod.ts"
+          }
+        ]
+      },
+      "development": {
+        "optimization": false,
+        "sourceMap": true,
+        "extractLicenses": false
+      }
+    },
+    "defaultConfiguration": "production"
+  },
+  "serve-ssr": {
+    "builder": "@nguniversal/builders:ssr-dev-server",
+    "configurations": {
+      "development": {
+        "browserTarget": "angular-poc:build:development",
+        "serverTarget": "angular-poc:server:development"
+      },
+      "production": {
+        "browserTarget": "angular-poc:build:production",
+        "serverTarget": "angular-poc:server:production"
+      }
+    },
+    "defaultConfiguration": "development"
+  },
+  "prerender": {
+    "builder": "@nguniversal/builders:prerender",
+    "options": {
+      "routes": ["/"]
+    },
+    "configurations": {
+      "production": {
+        "browserTarget": "angular-poc:build:production",
+        "serverTarget": "angular-poc:server:production"
+      },
+      "development": {
+        "browserTarget": "angular-poc:build:development",
+        "serverTarget": "angular-poc:server:development"
+      }
+    },
+    "defaultConfiguration": "production"
+  }
+}
+```
+
+````
+## package.json
+```json
 scripts: {
  "dev:ssr": "ng run angular-poc:serve-ssr",               Running application in local
  "serve:ssr": "node dist/angular-poc/server/main.js",
@@ -43,7 +113,7 @@ dependencies:{
  "@nguniversal/express-engine": "^12.1.0",
  "express": "^4.15.2",
 }
-```
+````
 
 ## Usage
 
