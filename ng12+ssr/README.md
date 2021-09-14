@@ -100,11 +100,14 @@ tsconfig.spec.json           TypeScript tests configuration
 
 ## package.json
 
+Use dev:ssr to run app locally
+Use build:ssr to generate the production build
+
 ```json
 "scripts": {
- "dev:ssr": "ng run angular-poc:serve-ssr",               Running application in local
+ "dev:ssr": "ng run angular-poc:serve-ssr",
  "serve:ssr": "node dist/angular-poc/server/main.js",
- "build:ssr": "ng build && ng run angular-poc:server",    Production Build
+ "build:ssr": "ng build && ng run angular-poc:server",
  "prerender": "ng run angular-poc:prerender"
 }
 ```
