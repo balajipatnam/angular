@@ -32,9 +32,9 @@ tsconfig.spec.json           TypeScript tests configuration
 
 ```json
 scripts: {
- "dev:ssr": "ng run angular-poc:serve-ssr", // Running application in local
+ "dev:ssr": "ng run angular-poc:serve-ssr",               Running application in local
  "serve:ssr": "node dist/angular-poc/server/main.js",
- "build:ssr": "ng build && ng run angular-poc:server", // Production Build
+ "build:ssr": "ng build && ng run angular-poc:server",    Production Build
  "prerender": "ng run angular-poc:prerender"
 }
 
