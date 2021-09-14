@@ -30,7 +30,7 @@ tsconfig.spec.json           TypeScript tests configuration
 
 ## Package.json
 
-```json
+```javascript
 scripts: {
  "dev:ssr": "ng run angular-poc:serve-ssr",               Running application in local
  "serve:ssr": "node dist/angular-poc/server/main.js",
