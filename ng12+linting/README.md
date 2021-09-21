@@ -32,14 +32,12 @@ npm install --save-dev tslint tslint-config-prettier prettier
 
 ```json
 {
-  "bracketSpacing": true,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
   "semi": true,
   "singleQuote": true,
-  "trailingComma": "es5",
-  "printWidth": 80,
-  "useTabs": false,
-  "tabWidth": 2,
-  "arrowParens": "avoid"
+  "trailingComma": "es5"
 }
 ```
 
@@ -52,7 +50,7 @@ yarn.loc
 node_modules
 ```
 
-4. Create **_tslint.json_**
+4. Create **tslint.json**
 
 ```json
 {
@@ -75,9 +73,6 @@ node_modules
     "eofline": true,
     "import-blacklist": [true, "rxjs/Rx"],
     "import-spacing": true,
-    "indent": {
-      "options": ["spaces"]
-    },
     "max-classes-per-file": false,
     "max-line-length": [true, 280],
     "member-ordering": [
