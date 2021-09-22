@@ -23,7 +23,7 @@ import { PostsComponent } from './components/posts/posts.component';
     NoPageFoundComponent,
     PostsComponent,
   ],
-  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
