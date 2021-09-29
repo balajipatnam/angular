@@ -2,7 +2,7 @@
 
 This is my Lint config for an angular project step by step. Angular 12+ has removed the linting by default.
 
-1. Add lint architect in the angular.json
+1. Add lint architect in the **angular.json*
 
 ```json
 {
@@ -21,10 +21,26 @@ This is my Lint config for an angular project step by step. Angular 12+ has remo
 ```
 
 2. Add **Prettier** and some plugins to avoid problems with **_tslint_**
+3. 
+NPM Commands
 
-```bash
-npm install --save-dev tslint tslint-config-prettier prettier
-```
+```npm install --save-dev tslint tslint-config-prettier prettier ```
+
+(or)
+
+```npm install --save-dev tslint```
+```npm install --save-dev tslint-config-prettier ```
+```npm install --save-dev prettier```
+
+Yarn Commands
+
+```yarn add --dev tslint tslint-config-prettier prettier ```
+
+(or)
+
+```yarn add --dev tslint```
+```yarn add --dev tslint-config-prettier ```
+```yarn add --dev prettier```
 
 3. Add **.prettierrc.json** and **.prettierignore** files (you have both in this repo)
 
@@ -171,8 +187,33 @@ We are installing 2 plugins:
 
 6. Adding **Husky**, **prettier** and **pretty-quick** to run prettier in your staged files
 
+NPM Command
+
 ```bash
-npm install --save-dev husky prettier pretty-quick
+npm install --save-dev husky pretty-quick
+```
+(or)
+
+```bash
+npm install --save-dev husky
+```
+
+```bash
+npm install --save-dev pretty-quick
+```
+
+YARN Command
+
+```bash
+yarn add --dev husky pretty-quick
+```
+(or)
+
+```bash
+yarn add --dev husky
+```
+```bash
+yarn add --dev pretty-quick
 ```
 
 7. Add this code in the package.json
