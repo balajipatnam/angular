@@ -24,23 +24,23 @@ This is my Lint config for an angular project step by step. Angular 12+ has remo
 3. 
 NPM Commands
 
-```npm install --save-dev tslint tslint-config-prettier prettier ```
+```bash npm install --save-dev tslint tslint-config-prettier prettier ```
 
 (or)
 
-```npm install --save-dev tslint```
-```npm install --save-dev tslint-config-prettier ```
-```npm install --save-dev prettier```
+```bash npm install --save-dev tslint```
+```bash npm install --save-dev tslint-config-prettier ```
+```bash npm install --save-dev prettier```
 
 Yarn Commands
 
-```yarn add --dev tslint tslint-config-prettier prettier ```
+```bash yarn add --dev tslint tslint-config-prettier prettier ```
 
 (or)
 
-```yarn add --dev tslint```
-```yarn add --dev tslint-config-prettier ```
-```yarn add --dev prettier```
+```bash yarn add --dev tslint```
+```bash yarn add --dev tslint-config-prettier ```
+```bash yarn add --dev prettier```
 
 3. Add **.prettierrc.json** and **.prettierignore** files (you have both in this repo)
 
