@@ -2,7 +2,7 @@
 
 This is my Lint config for an angular project step by step. Angular 12+ has removed the linting by default.
 
-1. Add lint architect in the angular.json
+1. Add lint architect in the **angular.json*
 
 ```json
 {
@@ -20,15 +20,53 @@ This is my Lint config for an angular project step by step. Angular 12+ has remo
 }
 ```
 
-2. Add **Prettier** and some plugins to avoid problems with **_tslint_**
+We are installing 3 plugins:
 
-```bash
-npm install --save-dev tslint tslint-config-prettier prettier
+- **tslint** to use TSLint to run Prettier
+- **prettier** to disable rules that conflict with Prettier
+- **tslint-config-prettier** to disable rules that conflict with Prettier
+- You can read more [here](https://prettier.io/docs/en/integrating-with-linters.html#tslint)
+
+
+2. Add **tslint** , **tslint tslint-config-prettier** and **prettier**
+ 
+NPM Commands
+
+```bash 
+npm install --save-dev tslint tslint-config-prettier prettier 
 ```
 
-3. Add **.prettierrc.json** and **.prettierignore** files (you have both in this repo)
+(or)
 
-.prettierrc.json
+```bash 
+npm install --save-dev tslint
+```
+```bash 
+npm install --save-dev tslint-config-prettier 
+```
+```bash 
+npm install --save-dev prettier
+```
+
+YARN Commands
+
+```bash 
+yarn add --dev tslint tslint-config-prettier prettier 
+```
+
+(or)
+
+```bash 
+yarn add --dev tslint
+```
+```bash 
+yarn add --dev tslint-config-prettier 
+```
+```bash 
+yarn add --dev prettier
+```
+
+3. Create **.prettierrc.json**
 
 ```json
 {
@@ -41,16 +79,16 @@ npm install --save-dev tslint tslint-config-prettier prettier
 }
 ```
 
-.prettierignore
+4. Create **.prettierignore** 
 
 ```
 package.json
 package-lock.json
-yarn.loc
+yarn.lock
 node_modules
 ```
 
-4. Create **tslint.json**
+5. Create **tslint.json**
 
 ```json
 {
@@ -161,18 +199,35 @@ node_modules
 }
 ```
 
-We are installing 2 plugins:
+6. Add **Husky** and **pretty-quick** to run prettier in your staged files
 
-- **tslint** to use TSLint to run Prettier
-- **tslint-config-prettier** to disable rules that conflict with Prettier
-- You can read more [here](https://prettier.io/docs/en/integrating-with-linters.html#tslint)
-
-5. Now you can `npm run lint` your project
-
-6. Adding **Husky**, **prettier** and **pretty-quick** to run prettier in your staged files
+NPM Command
 
 ```bash
-npm install --save-dev husky prettier pretty-quick
+npm install --save-dev husky pretty-quick
+```
+(or)
+
+```bash
+npm install --save-dev husky
+```
+
+```bash
+npm install --save-dev pretty-quick
+```
+
+YARN Command
+
+```bash
+yarn add --dev husky pretty-quick
+```
+(or)
+
+```bash
+yarn add --dev husky
+```
+```bash
+yarn add --dev pretty-quick
 ```
 
 7. Add this code in the package.json
@@ -185,15 +240,27 @@ npm install --save-dev husky prettier pretty-quick
   }
 ```
 
-8. Add these two properties inside scripts in package.json
+8. Add these two properties inside **scripts** in **package.json**
 
 ```
 "lint": "ng lint",
 "format": "prettier --write ."
 ```
 
-9. Run lint
+## Usage
 
 ```
 npm run lint
 ```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
