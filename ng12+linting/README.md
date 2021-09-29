@@ -20,9 +20,10 @@ This is my Lint config for an angular project step by step. Angular 12+ has remo
 }
 ```
 
-We are installing 2 plugins:
+We are installing 3 plugins:
 
 - **tslint** to use TSLint to run Prettier
+- **prettier** to disable rules that conflict with Prettier
 - **tslint-config-prettier** to disable rules that conflict with Prettier
 - You can read more [here](https://prettier.io/docs/en/integrating-with-linters.html#tslint)
 
@@ -47,7 +48,7 @@ npm install --save-dev tslint-config-prettier
 npm install --save-dev prettier
 ```
 
-Yarn Commands
+YARN Commands
 
 ```bash 
 yarn add --dev tslint tslint-config-prettier prettier 
@@ -65,9 +66,7 @@ yarn add --dev tslint-config-prettier
 yarn add --dev prettier
 ```
 
-3. Add **.prettierrc.json** and **.prettierignore** files (you have both in this repo)
-
-.prettierrc.json
+3. Add **.prettierrc.json**
 
 ```json
 {
@@ -80,7 +79,7 @@ yarn add --dev prettier
 }
 ```
 
-3. Create **.prettierignore** 
+4. Create **.prettierignore** 
 
 ```
 package.json
@@ -89,7 +88,7 @@ yarn.lock
 node_modules
 ```
 
-4. Create **tslint.json**
+5. Create **tslint.json**
 
 ```json
 {
@@ -200,9 +199,9 @@ node_modules
 }
 ```
 
-5. Now you can `npm run lint` your project
+6. Now you can `npm run lint` your project
 
-6. Add **Husky** and **pretty-quick** to run prettier in your staged files
+7. Add **Husky** and **pretty-quick** to run prettier in your staged files
 
 NPM Command
 
@@ -233,7 +232,7 @@ yarn add --dev husky
 yarn add --dev pretty-quick
 ```
 
-7. Add this code in the package.json
+8. Add this code in the package.json
 
 ```json
  "husky": {
@@ -243,15 +242,31 @@ yarn add --dev pretty-quick
   }
 ```
 
-8. Add these two properties inside scripts in package.json
+9. Add these two properties inside scripts in package.json
 
 ```
 "lint": "ng lint",
 "format": "prettier --write ."
 ```
 
-9. Run lint
+## Usage
+
+10. Run lint
 
 ```
 npm run lint
 ```
+
+Open a browser and navigate to http://localhost:4200/. You should see the familiar Tour of Heroes dashboard page
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
