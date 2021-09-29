@@ -20,8 +20,15 @@ This is my Lint config for an angular project step by step. Angular 12+ has remo
 }
 ```
 
-2. Add **Prettier** and some plugins to avoid problems with **_tslint_**
-3. 
+We are installing 2 plugins:
+
+- **tslint** to use TSLint to run Prettier
+- **tslint-config-prettier** to disable rules that conflict with Prettier
+- You can read more [here](https://prettier.io/docs/en/integrating-with-linters.html#tslint)
+
+
+2. Add **tslint** , **tslint tslint-config-prettier** and **prettier**
+ 
 NPM Commands
 
 ```bash 
@@ -49,11 +56,14 @@ yarn add --dev tslint tslint-config-prettier prettier
 (or)
 
 ```bash 
-yarn add --dev tslint```
+yarn add --dev tslint
+```
 ```bash 
-yarn add --dev tslint-config-prettier ```
+yarn add --dev tslint-config-prettier 
+```
 ```bash 
-yarn add --dev prettier```
+yarn add --dev prettier
+```
 
 3. Add **.prettierrc.json** and **.prettierignore** files (you have both in this repo)
 
@@ -70,7 +80,7 @@ yarn add --dev prettier```
 }
 ```
 
-.prettierignore
+3. Create **.prettierignore** 
 
 ```
 package.json
@@ -190,15 +200,9 @@ node_modules
 }
 ```
 
-We are installing 2 plugins:
-
-- **tslint** to use TSLint to run Prettier
-- **tslint-config-prettier** to disable rules that conflict with Prettier
-- You can read more [here](https://prettier.io/docs/en/integrating-with-linters.html#tslint)
-
 5. Now you can `npm run lint` your project
 
-6. Adding **Husky**, **prettier** and **pretty-quick** to run prettier in your staged files
+6. Add **Husky** and **pretty-quick** to run prettier in your staged files
 
 NPM Command
 
