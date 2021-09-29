@@ -25,21 +25,26 @@ This is my Lint config for an angular project step by step. Angular 12+ has remo
 NPM Commands
 
 ```bash 
-npm install --save-dev tslint tslint-config-prettier prettier ```
+npm install --save-dev tslint tslint-config-prettier prettier 
+```
 
 (or)
 
 ```bash 
-npm install --save-dev tslint```
+npm install --save-dev tslint
+```
 ```bash 
-npm install --save-dev tslint-config-prettier ```
+npm install --save-dev tslint-config-prettier 
+```
 ```bash 
-npm install --save-dev prettier```
+npm install --save-dev prettier
+```
 
 Yarn Commands
 
 ```bash 
-yarn add --dev tslint tslint-config-prettier prettier ```
+yarn add --dev tslint tslint-config-prettier prettier 
+```
 
 (or)
 
