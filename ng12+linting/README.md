@@ -66,7 +66,7 @@ yarn add --dev tslint-config-prettier
 yarn add --dev prettier
 ```
 
-3. Add **.prettierrc.json**
+3. Create **.prettierrc.json**
 
 ```json
 {
@@ -199,9 +199,7 @@ node_modules
 }
 ```
 
-6. Now you can `npm run lint` your project
-
-7. Add **Husky** and **pretty-quick** to run prettier in your staged files
+6. Add **Husky** and **pretty-quick** to run prettier in your staged files
 
 NPM Command
 
@@ -232,7 +230,7 @@ yarn add --dev husky
 yarn add --dev pretty-quick
 ```
 
-8. Add this code in the package.json
+7. Add this code in the package.json
 
 ```json
  "husky": {
@@ -242,7 +240,7 @@ yarn add --dev pretty-quick
   }
 ```
 
-9. Add these two properties inside scripts in package.json
+8. Add these two properties inside **scripts** in **package.json**
 
 ```
 "lint": "ng lint",
@@ -250,8 +248,6 @@ yarn add --dev pretty-quick
 ```
 
 ## Usage
-
-10. Run lint
 
 ```
 npm run lint
