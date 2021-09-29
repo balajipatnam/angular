@@ -46,7 +46,7 @@ npm install --save-dev tslint tslint-config-prettier prettier
 ```
 package.json
 package-lock.json
-yarn.loc
+yarn.lock
 node_modules
 ```
 
