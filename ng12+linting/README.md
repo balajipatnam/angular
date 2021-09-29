@@ -253,8 +253,6 @@ yarn add --dev pretty-quick
 npm run lint
 ```
 
-Open a browser and navigate to http://localhost:4200/. You should see the familiar Tour of Heroes dashboard page
-
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
