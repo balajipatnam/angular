@@ -2,7 +2,7 @@
 
 This is my Lint config for an angular project step by step. Angular 12+ has removed the linting by default.
 
-1. Add lint architect in the **angular.json*
+1. Add lint architect in the \*_angular.json_
 
 ```json
 {
@@ -27,42 +27,45 @@ We are installing 3 plugins:
 - **tslint-config-prettier** to disable rules that conflict with Prettier
 - You can read more [here](https://prettier.io/docs/en/integrating-with-linters.html#tslint)
 
-
 2. Add **tslint** , **tslint tslint-config-prettier** and **prettier**
- 
+
 NPM Commands
 
-```bash 
-npm install --save-dev tslint tslint-config-prettier prettier 
+```bash
+npm install --save-dev tslint tslint-config-prettier prettier
 ```
 
 (or)
 
-```bash 
+```bash
 npm install --save-dev tslint
 ```
-```bash 
-npm install --save-dev tslint-config-prettier 
+
+```bash
+npm install --save-dev tslint-config-prettier
 ```
-```bash 
+
+```bash
 npm install --save-dev prettier
 ```
 
 YARN Commands
 
-```bash 
-yarn add --dev tslint tslint-config-prettier prettier 
+```bash
+yarn add --dev tslint tslint-config-prettier prettier
 ```
 
 (or)
 
-```bash 
+```bash
 yarn add --dev tslint
 ```
-```bash 
-yarn add --dev tslint-config-prettier 
+
+```bash
+yarn add --dev tslint-config-prettier
 ```
-```bash 
+
+```bash
 yarn add --dev prettier
 ```
 
@@ -79,7 +82,7 @@ yarn add --dev prettier
 }
 ```
 
-4. Create **.prettierignore** 
+4. Create **.prettierignore**
 
 ```
 package.json
@@ -206,6 +209,7 @@ NPM Command
 ```bash
 npm install --save-dev husky pretty-quick
 ```
+
 (or)
 
 ```bash
@@ -221,11 +225,13 @@ YARN Command
 ```bash
 yarn add --dev husky pretty-quick
 ```
+
 (or)
 
 ```bash
 yarn add --dev husky
 ```
+
 ```bash
 yarn add --dev pretty-quick
 ```
@@ -253,6 +259,15 @@ yarn add --dev pretty-quick
 npm run lint
 ```
 
+## Troubleshooting
+
+When the hooks not picking while pre-commit follow below process
+
+```
+rm -rf .git/hooks
+npm i --save-dev husky@4.3.8
+```
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -262,5 +277,3 @@ Please make sure to update tests as appropriate.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-
