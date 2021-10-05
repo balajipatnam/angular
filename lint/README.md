@@ -27,7 +27,7 @@ We are installing 3 plugins:
 - **tslint-config-prettier** to disable rules that conflict with Prettier
 - You can read more [here](https://prettier.io/docs/en/integrating-with-linters.html#tslint)
 
-2. Add **tslint** , **tslint tslint-config-prettier** and **prettier**
+2. Add **tslint** , **tslint**, **tslint-config-prettier** and **prettier**
 
 NPM Commands
 
@@ -69,7 +69,7 @@ yarn add --dev tslint-config-prettier
 yarn add --dev prettier
 ```
 
-3. Create **.prettierrc.json**
+3. Create **.prettierrc**
 
 ```json
 {
