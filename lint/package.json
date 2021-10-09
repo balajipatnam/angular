@@ -45,5 +45,10 @@
     "tslint-config-prettier": "^1.18.0",
     "codelyzer": "^6.0.2",
     "husky": "^7.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged --check && ng lint && npm run format"
+    }
   }
 }
