@@ -1,0 +1,44 @@
+<div class="login">
+  <div class="login-content">
+    <form class="row login-form">
+      <h4>Log in to your account</h4>
+      <div class="col-md-12 pb-3">
+        <label for="inputEmail" class="form-label">Email Address</label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-user"></i> </span>
+          </div>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            placeholder="Email Address"
+          />
+        </div>
+      </div>
+      <div class="col-md-12 pb-3">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-lock"></i> </span>
+          </div>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="Password"
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary" routerLink="/dashboard">
+          Sign in
+        </button>
+      </div>
+      <div class="footer">
+        Don't have an account?
+        <a href="/register" routerLink="/register">Sign Up</a>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,168 @@
+body.theme-default {
+  --primary-color: #fff;
+
+  --login-bg-color: #e6ebf5;
+  --login-heading-color: #43a489;
+
+  --side-nav-color: #43a489;
+  --side-nav-icon-color: #fff;
+  --sideBar-icon-hover-color: #06d6a0;
+
+  --default-btn-color: #43a489;
+  --primary-btn-color: #43a489;
+
+  --contact-hover-color: #e6ebf5;
+  --chat-bg-color: #e6ebf5;
+
+  --is-online: #06d6a0;
+  --is-offline: #b9b9b9;
+
+  --heading-color: #4a4a4a;
+  --heading-border-color: #e8e8e8;
+
+  --title-color: #2d2d2d;
+  --sub-title-color: #7a7f9a;
+
+  --media-tab1-color: #19875454;
+  --media-tab2-color: #8191e266;
+  --media-btn-color: #8191e2;
+
+  --menu-icon-color: #a2a2a2;
+  --dialog-heading-color: #43bb99;
+
+  --input-icon-color: #c1c1c1;
+  --input-placeholder-color: #7a7f9a;
+
+  --sent-msg-bg-color: #d2efe1;
+  --sent-msg-color: #2d2d2d;
+
+  --receive-msg-bg-color: #fff;
+  --receive-msg-color: #2d2d2d;
+
+  .chat-messages ::-webkit-scrollbar-track {
+    background: #e6ebf5;
+  }
+  .chat-messages *::-webkit-scrollbar-thumb {
+    background-color: #bec8dc;
+  }
+  .mat-button.mat-primary {
+    color: #fff;
+    background: #43bb99;
+  }
+}
+
+body.theme-dark {
+  --primary-color: #222931;
+
+  --login-bg-color: #222931;
+  --login-heading-color: #43a489;
+
+  --side-nav-color: #222931;
+  --side-nav-icon-color: #fff;
+  --sideBar-icon-hover-color: #fff;
+
+  --chat-bg-color: #282f38;
+  --contact-hover-color: #454950;
+
+  --default-btn-color: #222931;
+  --primary-btn-color: #43a489;
+
+  --is-online: #06d6a0;
+  --is-offline: #b9b9b9;
+
+  --heading-color: #fff;
+  --heading-border-color: #4e4e4e;
+
+  --title-color: #fff;
+  --sub-title-color: #a1a1a1;
+
+  --media-tab1-color: #19875454;
+  --media-tab2-color: #8191e266;
+  --media-btn-color: #8191e2;
+
+  --menu-icon-color: #a2a2a2;
+  --dialog-heading-color: #43bb99;
+
+  --input-icon-color: #c1c1c1;
+  --input-placeholder-color: #b9b9b9;
+
+  --sent-msg-bg-color: #43a489;
+  --sent-msg-color: #fff;
+
+  --receive-msg-bg-color: #222931;
+  --receive-msg-color: #fff;
+
+  *::-webkit-scrollbar-track {
+    background: #222931;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #454950;
+  }
+  .chat-messages ::-webkit-scrollbar-track {
+    background: #282f38;
+  }
+  .mat-button.mat-primary {
+    color: #fff;
+    background: #43bb99;
+  }
+}
+
+body.theme-purple {
+  --primary-color: #5c4f81;
+
+  --login-bg-color: #5c4f81;
+  --login-heading-color: #5c4f81;
+
+  --side-nav-color: #5c4f81;
+  --side-nav-icon-color: #fff;
+  --sideBar-icon-hover-color: #fff;
+
+  --chat-bg-color: #4e426d;
+  --contact-hover-color: #4e426d;
+
+  --default-btn-color: #5c4f81;
+  --primary-btn-color: #fff;
+
+  --is-online: #06d6a0;
+  --is-offline: #b9b9b9;
+
+  --heading-color: #fff;
+  --heading-border-color: #797979;
+
+  --title-color: #fff;
+  --sub-title-color: #9b8cc3;
+
+  --media-tab1-color: #19875454;
+  --media-tab2-color: #8191e266;
+  --media-btn-color: #8191e2;
+
+  --menu-icon-color: #b5b5b5;
+  --dialog-heading-color: #5c4f81;
+
+  --input-icon-color: #c1c1c1;
+  --input-placeholder-color: #b9b9b9;
+
+  --sent-msg-bg-color: #fff;
+  --sent-msg-color: #897da8;
+
+  --receive-msg-bg-color: #5c4f81;
+  --receive-msg-color: #fff;
+
+  *::-webkit-scrollbar-track {
+    background: #5c4f81;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #4e426d;
+  }
+  .chat-messages ::-webkit-scrollbar-track {
+    background: #4e426d;
+  }
+  .chat-messages *::-webkit-scrollbar-thumb {
+    background-color: #5c4f81;
+  }
+
+  .mat-button.mat-primary {
+    color: #fff;
+    background: #5c4f81;
+  }
+}

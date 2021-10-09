@@ -1,0 +1,44 @@
+@mixin list-group {
+  padding: 0;
+  li {
+    list-style: none;
+    padding: 1rem;
+  }
+  &-title {
+    border-bottom: 0.1rem solid var(--heading-border-color);
+    margin: 1rem;
+    padding: 1rem 0 !important;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--heading-color) !important;
+    display: flex;
+  }
+  &-icon {
+    padding: 0.5rem 0.8rem;
+    background: var(--contact-hover-color);
+    border-radius: 0.5rem;
+    color: var(--input-icon-color);
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+@mixin user-status {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  left: auto;
+  bottom: 0;
+  top: 2.5rem;
+  background: var(--is-offline);
+}
+@mixin avatar($val) {
+  .avatar {
+    height: #{$val}rem;
+    width: #{$val}rem;
+    object-fit: cover;
+  }
+}
