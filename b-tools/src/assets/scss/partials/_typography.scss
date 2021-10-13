@@ -1,0 +1,52 @@
+// -----------------------------------------------------------------------------------------------------
+// @ Typography
+// -----------------------------------------------------------------------------------------------------
+html {
+  overflow: hidden;
+  font-size: 14px;
+}
+html,
+body {
+  font-family: "Muli", "Helvetica Neue", "Arial", sans-serif;
+  line-height: 1.4 !important;
+  letter-spacing: -0.1px !important;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  height: 100%;
+  background-color: #fff;
+}
+
+// Material Tooltip styles starts here
+.mat-tooltip-panel {
+  margin-left: -2rem;
+}
+.mat-tooltip {
+  background-color: #000 !important;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+.mat-button.mat-default {
+  color: var(--default-btn-color);
+  border: 1px solid #c3c3c3;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e6ebf5 #fff;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #e6ebf5;
+  border-radius: 20px;
+}
