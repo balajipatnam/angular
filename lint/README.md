@@ -2,7 +2,7 @@
 
 ## Available Scripts
 
-### Start the application
+### Install Packages
 
 ```bash
 npm run install
