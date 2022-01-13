@@ -17,13 +17,12 @@
     flex-direction: column;
     background: white;
     padding: 2rem;
-    width: 450px;
-    border-radius: 1rem;
+    width: 400px;
+    border-radius: 0.4rem;
     font-size: 1rem;
     h4 {
-      text-align: center;
-      padding: 1rem;
-      padding-bottom: 1rem;
+      font-weight: 700 !important;
+      margin-bottom: 20px;
       color: var(--login-heading-color);
     }
     // .form-control {

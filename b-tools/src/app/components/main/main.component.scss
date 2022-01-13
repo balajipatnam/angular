@@ -1,0 +1,17 @@
+main {
+  height: 100%;
+  .layout {
+    height: 100%;
+    .app-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      background: #f1f1f1;
+      height: 100%;
+    }
+    .header-title {
+      flex: 1;
+      display: flex;
+    }
+  }
+}
