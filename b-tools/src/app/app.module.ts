@@ -9,6 +9,8 @@ import { UnAuthLayoutComponent } from './components/unAuth/unAuth.component';
 import { NoPageFoundComponent } from './components/main/no-page-found/no-page-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './components/shared/shared.module';
+import { CoreModule } from './core/core.module';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { SharedModule } from './components/shared/shared.module';
     NoPageFoundComponent,
   ],
   imports: [
+    CoreModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

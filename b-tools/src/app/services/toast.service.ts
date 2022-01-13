@@ -61,6 +61,41 @@ import { MatSnackBar, MAT_SNACK_BAR_DATA } from '@angular/material/snack-bar';
         margin-left: 10px;
         font-size: 16px;
       }
+      .snackbar-content {
+        display: flex;
+        align-items: center;
+      }
+      .icon1 {
+        color: #ed502b;
+        cursor: pointer;
+        font-size: 24px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .green {
+        color: #34b514;
+        border: 2px solid #34b514;
+      }
+      .warning {
+        color: gold;
+      }
+      .icon2 {
+        color: #ada6a6;
+        margin-left: auto;
+        cursor: pointer;
+        font-size: 20px;
+      }
+      .pl-30 {
+        color: #757575;
+        padding-left: 35px;
+        padding-top: 5px;
+      }
+      .ml-10 {
+        margin-left: 10px;
+        font-size: 16px;
+      }
     `,
   ],
 })
@@ -82,7 +117,7 @@ export class ToastService {
 
   success(message: string) {
     this.snackBar.openFromComponent(SnackbarComponent, {
-      duration: 10000,
+      duration: 300000,
       verticalPosition: 'top',
       horizontalPosition: 'right',
       panelClass: ['green-snackbar'],
