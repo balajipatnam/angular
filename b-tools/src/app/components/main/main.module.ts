@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { MainRoutes } from './main.routing';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { MainRoutes } from './main.routing';
     SharedModule,
     HttpClientModule,
     FormsModule,
+    MatIconModule,
     RouterModule.forChild(MainRoutes),
   ],
   declarations: [HomeComponent],
