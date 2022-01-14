@@ -13,16 +13,26 @@ import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { MainRoutes } from './main.routing';
 import { MatIconModule } from '@angular/material/icon';
+import { FileUploadComponent } from '../shared/components/file-upload/file-upload.component';
+import { FileUploadProgressComponent } from '../shared/components/file-upload/file-upload-progress/file-upload-progress.component';
+import { DndDirective } from '../shared/components/file-upload/dnd.directive';
+import { FileUploadModule } from '../shared/components/file-upload/file-upload.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    FileUploadModule,
     SharedModule,
     HttpClientModule,
     FormsModule,
     MatIconModule,
     RouterModule.forChild(MainRoutes),
   ],
-  declarations: [HomeComponent],
+  declarations: [
+    HomeComponent,
+    // FileUploadComponent,
+    // FileUploadProgressComponent,
+    // DndDirective,
+  ],
 })
 export class MainModule {}
