@@ -48,7 +48,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged --check && ng lint && npm run format"
     }
   }
 }
