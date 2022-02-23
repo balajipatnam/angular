@@ -1,8 +1,8 @@
-# Lint Angular12+ project
+# Prettier and ESLint with angular
 
-This is my Lint config for an angular project step by step. Angular 12+ has removed the linting by default.
+**Note:** Lint has removed in Angular 12+ versions
 
-1. Add lint architect in the \*_angular.json_
+Step1: Add lint architect in the **angular.json** file
 
 ```json
 {
@@ -19,57 +19,29 @@ This is my Lint config for an angular project step by step. Angular 12+ has remo
   }
 }
 ```
+Required packages to install:
 
-We are installing 3 plugins:
+1. **tslint** is an extensible static analysis tool that checks TypeScript code for readability, maintainability, and functionality errors. It is widely supported across modern editors & build systems and can be customized with your own lint rules, configurations, and formatters.
 
-- **tslint** to use TSLint to run Prettier
-- **prettier** to disable rules that conflict with Prettier
-- **tslint-config-prettier** to disable rules that conflict with Prettier
-- You can read more [here](https://prettier.io/docs/en/integrating-with-linters.html#tslint)
+2. **prettier** is an opinionated code formatter with support for Javscript, Angular,React,Vue HTML, Css
 
-2. Add **tslint** , **tslint**, **tslint-config-prettier** and **prettier**
 
-NPM Commands
+3. **tslint-config-prettier** disables all conflicting rules that may cause such problems. Prettier takes care of the formatting whereas tslint takes care of all the other things.
 
+You can read more about prettier [here](https://prettier.io/docs/en/integrating-with-linters.html#tslint)
+
+Step 2: Commands to install following packages **tslint** , **prettier** and **tslint-config-prettier**
+
+**Npm Command**
 ```bash
 npm install --save-dev tslint tslint-config-prettier prettier
 ```
-
-(or)
-
-```bash
-npm install --save-dev tslint
-```
-
-```bash
-npm install --save-dev tslint-config-prettier
-```
-
-```bash
-npm install --save-dev prettier
-```
-
-YARN Commands
-
+**Yarn Command**
 ```bash
 yarn add --dev tslint tslint-config-prettier prettier
 ```
 
-(or)
-
-```bash
-yarn add --dev tslint
-```
-
-```bash
-yarn add --dev tslint-config-prettier
-```
-
-```bash
-yarn add --dev prettier
-```
-
-3. Create **.prettierrc**
+Step 3: Create **.prettierrc** file and add following code
 
 ```json
 {
@@ -81,17 +53,15 @@ yarn add --dev prettier
   "trailingComma": "es5"
 }
 ```
+Step 4: Create **.prettierignore** file and add following code
 
-4. Create **.prettierignore**
-
-```
+```json
 package.json
 package-lock.json
 yarn.lock
 node_modules
 ```
-
-5. Create **tslint.json**
+Step 5: Create **tslint.json** file and add following code
 
 ```json
 {
@@ -201,61 +171,40 @@ node_modules
   "rulesDirectory": ["codelyzer"]
 }
 ```
+Step 6: Add **Husky** and **pretty-quick** to run prettier in your staged files
 
-6. Add **Husky** and **pretty-quick** to run prettier in your staged files
-
-NPM Command
-
+**Npm Command**
 ```bash
 npm install --save-dev husky pretty-quick
 ```
 
-(or)
-
-```bash
-npm install --save-dev husky
-```
-
-```bash
-npm install --save-dev pretty-quick
-```
-
-YARN Command
-
+**Yarn Command**
 ```bash
 yarn add --dev husky pretty-quick
 ```
 
-(or)
-
-```bash
-yarn add --dev husky
-```
-
-```bash
-yarn add --dev pretty-quick
-```
-
-7. Add this code in the package.json
+Step 7: Add this code in the **package.json**
 
 ```json
- "husky": {
+"husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged --check && ng lint && npm run format"
     }
   }
 ```
 
-8. Add these two properties inside **scripts** in **package.json**
+Step 8: Add followed two properties inside scripts in **package.json**
 
-```
-"lint": "ng lint",
-"format": "prettier --write ."
+```json
+"scripts": {
+   "lint": "ng lint",
+   "format": "prettier --write ."
+},
 ```
 
 ## Usage
 
-```
+```bash
 npm run lint
 ```
 
@@ -263,17 +212,7 @@ npm run lint
 
 When the hooks not picking while pre-commit follow below process
 
-```
+```bash
 rm -rf .git/hooks
 npm i --save-dev husky@4.3.8
 ```
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
