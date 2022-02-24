@@ -1,4 +1,4 @@
-# Prettier and ESLint with angular
+# Prettier and TSLint with angular
 
 **Note:** Lint has removed in Angular 12+ versions
 
