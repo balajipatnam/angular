@@ -216,3 +216,15 @@ When the hooks not picking while pre-commit follow below process
 rm -rf .git/hooks
 npm i --save-dev husky@4.3.8
 ```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+Suggestions are welcome to improve this package.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
