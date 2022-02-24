@@ -1,6 +1,11 @@
 # Angular 12+ Server-side rendering(SSR) with Angular Universal
 
 Angular Universal, a technology that renders Angular applications on the server.
+# Angular Server-side rendering(SSR) with Angular Universal
+
+Angular Universal, a technology that renders Angular applications on the server.
+
+In this post we will walk through Server-side rendering(SSR) with Angular Universal step by step.
 
 ## Installation
 
@@ -32,9 +37,10 @@ tsconfig.spec.json           TypeScript tests configuration
 
 ```json
  "outputPath": "dist/angular-poc",
- // Add below Command instead of above one
+ // Replace below Command in place of above one
  "outputPath": "dist/angular-poc/browser",
 ```
+Include below configuration into angular.json file
 
 ```json
 {
@@ -292,6 +298,8 @@ Open a browser and navigate to http://localhost:4200/. You should see the famili
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+Suggestions are welcome to improve this package.
 
 ## License
 
