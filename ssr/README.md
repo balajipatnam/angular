@@ -1,6 +1,3 @@
-# Angular 12+ Server-side rendering(SSR) with Angular Universal
-
-Angular Universal, a technology that renders Angular applications on the server.
 # Angular Server-side rendering(SSR) with Angular Universal
 
 Angular Universal, a technology that renders Angular applications on the server.
